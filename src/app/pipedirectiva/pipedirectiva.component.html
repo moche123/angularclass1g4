@@ -1,0 +1,5 @@
+<button (click)="addNew()">ADD</button>
+
+<div *ngFor="let persona of personas | orderAge">
+   <h2> {{persona?.nombre}} - {{persona?.edad}}</h2>
+</div>

@@ -1,7 +1,31 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PersonajesComponent } from './personajes/personajes.component';
+import { PipedirectivaComponent } from './pipedirectiva/pipedirectiva.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  
+  {
+    path: 'personaje',
+    component: PersonajesComponent
+    
+  },
+  // {
+  //   path: 'personaje/:id',
+  //   component: PersonajesComponent
+    
+  // },
+  {
+    path: 'pipe-directiva',
+    component: PipedirectivaComponent
+    
+  },
+  {
+    path: '',
+    redirectTo: 'personaje',
+    pathMatch: 'full'
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
