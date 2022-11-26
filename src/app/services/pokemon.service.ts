@@ -28,7 +28,7 @@ export class PokemonService {
     const personas: any[] = [
       {
         nombre: "Juan",
-        edad: 20
+        edad: 16
       },
       {
         nombre: "Pedro",
@@ -37,7 +37,7 @@ export class PokemonService {
       },
       {
         nombre: "Maria",
-        edad: 30
+        edad: 13
       },
   
       {

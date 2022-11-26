@@ -1,0 +1,34 @@
+//! DEFECTO
+
+//! BLOQUE
+/*
+DIV
+PÁRRAFO
+SPAN
+*/
+
+//! INLINE
+/*
+IMAGE
+BUTTON
+
+*/
+
+//! SETEARLO
+
+//! INLINE BLOCK
+//! GRID ==> AMBOS EJES
+//! FLEXBOX ==> UN SOLO EJE
+
+
+.parent{
+    background-color: aqua;
+    display: grid;
+    // grid-template-columns: repeat(3,300px) ;
+   
+    // grid-template-rows: repeat(auto,800px);
+
+
+    grid-template-columns: repeat( auto-fit, minmax(300px,1fr) );
+
+}

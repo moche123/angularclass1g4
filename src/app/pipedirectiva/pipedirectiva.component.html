@@ -1,5 +1,16 @@
 <!-- <button (click)="addNew()">ADD</button> -->
 
 <div *ngFor="let persona of ( personasObservable$ | async ) | orderAge">
-   <h2> {{persona?.nombre}} - {{persona?.edad}}</h2>
+   <h2 [ngClass]="persona?.edad>17 ? 'mayorEdad' : 'menorEdad'"> {{persona?.nombre}} - {{persona?.edad}} </h2>
+   <h3 *ngIf="persona?.edad>17; else menorEdad">Es mayor de edad</h3>
+
+
+   <ng-template #menorEdad>
+      <h3 >Es menor de edad</h3>
+   </ng-template>
+
+
+
+
+
 </div>
