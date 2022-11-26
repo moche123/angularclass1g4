@@ -1,7 +1,8 @@
 import { OnChanges, Pipe, PipeTransform, SimpleChanges } from '@angular/core';
 
 @Pipe({
-  name: 'orderAge'
+  name: 'orderAge',
+  pure: false
 })
 //! UNDEFINED = EXISTE PERO AUN NO TIENE VALOR, NULL ES UN VALOR 
 export class OrderAgePipe implements PipeTransform {

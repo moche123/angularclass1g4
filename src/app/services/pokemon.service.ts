@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { interval, Observable } from 'rxjs';
+import { map, reduce } from 'rxjs/operators';
 import { Personaje } from '../models/personaje.interface';
 
 @Injectable({ //! DECORATOR: Describir la naturaleza de la clase, INJECTABLE: DESDE DONDE SE VA A CONSUMIR
@@ -22,4 +22,55 @@ export class PokemonService {
     )
 
   }
+
+
+  getPersonasToPipe(){
+    const personas: any[] = [
+      {
+        nombre: "Juan",
+        edad: 20
+      },
+      {
+        nombre: "Pedro",
+  
+        edad: 40
+      },
+      {
+        nombre: "Maria",
+        edad: 30
+      },
+  
+      {
+        
+        nombre: "Carlos",
+        edad: 28
+        
+      }
+    ]
+
+    let personasArrayModificable:any[] = []
+
+    //! INTERVAL => 0, 1, 2, 3, 4
+    //! OPERADORES => funcionalidades que modifican el conjunto de datos
+
+    return interval(1000).pipe(
+
+      map( i => {
+        if(i < personas.length){
+          personasArrayModificable.push(personas[i])
+        }
+        return personasArrayModificable
+       
+      }  ),
+     
+
+      
+    )
+
+
+  }
+
+
+
+
 }
