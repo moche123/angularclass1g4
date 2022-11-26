@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, OnChanges, SimpleChanges, AfterViewInit, EventEmitter } from '@angular/core';
+import { ChangeDetectorRef , Component, OnInit, Input, Output, OnChanges, SimpleChanges, AfterViewInit, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-children',
@@ -11,7 +11,7 @@ export class ChildrenComponent implements OnInit,OnChanges,AfterViewInit {
   @Output() getChildrenValue:any = new EventEmitter();
   public numberChildren:any = 28;
 
-  constructor() {
+  constructor(private cdRef:ChangeDetectorRef) {
     console.log('Hola soy el constructor')
    } //! PRIMERO
 
@@ -19,10 +19,12 @@ export class ChildrenComponent implements OnInit,OnChanges,AfterViewInit {
     //! POR PRIMERA VEZ DESPUES DEL CONSRUCTOR Y ANTES DEL ONINIT,
     //! Y LUEGO SE VA A EJECUTAR CADA VEZ QUE HAYAN CAMBIOS EN EL INPUT
     console.log('Hola soy el onchanges')
-    // if(changes['numberOfParent'].currentValue == this.numberChildren){
-    //   console.log('ABCD')
-    //   this.devolverValorAlcanzado();
-    // }
+    //  if(changes['numberOfParent'].currentValue == this.numberChildren){
+    //    console.log('ABCD')
+    //    this.devolverValorAlcanzado(this.numberChildren);
+    //    this.cdRef.detectChanges();
+    //    this.getChildrenValue.emit(this.numberChildren)
+    //  }
 
     
 
