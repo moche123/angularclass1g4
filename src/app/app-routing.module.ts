@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ParentComponent } from './parent/parent.component';
 import { PersonajesComponent } from './personajes/personajes.component';
 import { PipedirectivaComponent } from './pipedirectiva/pipedirectiva.component';
 
@@ -18,6 +19,11 @@ const routes: Routes = [
   {
     path: 'pipe-directiva',
     component: PipedirectivaComponent
+    
+  },
+  {
+    path: 'parent',
+    component: ParentComponent
     
   },
   {

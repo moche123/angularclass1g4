@@ -8,6 +8,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { PipedirectivaComponent } from './pipedirectiva/pipedirectiva.component';
 import { OrderAgeDirective } from './directivas/order-age.directive';
 import { OrderAgePipe } from './pipe/order-age.pipe';
+import { ParentComponent } from './parent/parent.component';
+import { ChildrenComponent } from './parent/children/children.component';
 
 @NgModule({
   declarations: [ //! COMPONENTES
@@ -15,7 +17,9 @@ import { OrderAgePipe } from './pipe/order-age.pipe';
     PersonajesComponent,
     PipedirectivaComponent,
     OrderAgeDirective,
-    OrderAgePipe
+    OrderAgePipe,
+    ParentComponent,
+    ChildrenComponent
   ],
   imports: [//! MODULOS
     BrowserModule,
