@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ParentComponent implements OnInit {
 
   public numberOfParent = 15;
+  public childrenNumber = 0
 
   constructor() { }
 
@@ -16,6 +17,10 @@ export class ParentComponent implements OnInit {
 
   changeParentNumber(){
     this.numberOfParent++
+  }
+
+  receiveChildrenValue(numberReceived:any){
+     this.childrenNumber = numberReceived
   }
 
 }
