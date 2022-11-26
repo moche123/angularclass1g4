@@ -14,4 +14,8 @@ export class ParentComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  changeParentNumber(){
+    this.numberOfParent++
+  }
+
 }
