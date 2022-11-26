@@ -22,13 +22,38 @@ BUTTON
 
 
 .parent{
-    background-color: aqua;
+    //background-color: aqua;
     display: grid;
     // grid-template-columns: repeat(3,300px) ;
    
     // grid-template-rows: repeat(auto,800px);
-
+    gap: 20px;
 
     grid-template-columns: repeat( auto-fit, minmax(300px,1fr) );
+
+
+    &__item{
+        color:rgb(4, 45, 93);
+
+        img{
+            border-radius: 30px;
+            width: 100%;
+        }
+
+        &__footer-card{
+            //background-color: aqua;
+            display: flex; //! POR DEFECTO EL FLEX(UN SOLO EJE), ESTÁ TOMANDO EL EJE X (MAIN AXIS ==> X)
+            //! MAIN AXIS, CROSS AXIS
+            //flex-direction: column;// ! Eje principal vendria a ser el eje Y
+            justify-content: space-between ; //! MAIN AXIS
+            align-items: center;
+
+            p{
+                padding: 0;
+                margin: 0;
+            }
+       
+        }
+    }
 
 }

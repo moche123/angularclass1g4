@@ -1,16 +1,22 @@
 <h1>PERSONAJES</h1>
 
-<div class="parent">
+<div class="container parent">
 
    <div *ngFor="let personaje of personajes">
 
-      <div class="item">
+      <div class="parent__item">
 
-         <h3>{{personaje.name}}</h3> 
+         <h3>{{ personaje.name.length>15 ? (personaje.name | slice:0:15)+'..' : personaje.name}}</h3> 
          
          <!-- <img src="{{personaje.image}}" alt=""> -->
          <!-- <img [src]=personaje.image alt=""> -->
          <img [src]=personaje.image alt="">
+
+         <br>
+         <div class="parent__item__footer-card">
+            <button class="btn btn-primary">CLICK</button>
+            <p>Hola</p>
+         </div>
       </div>
 
 
