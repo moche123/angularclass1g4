@@ -8,8 +8,8 @@ const routes: Routes = [
   
   {
     path: 'personaje',
-    component: PersonajesComponent
-    
+    //component: PersonajesComponent
+    loadChildren: () => import('./personajes/personajes.module').then(m => m.PersonajesModule)
   },
   // {
   //   path: 'personaje/:id',
