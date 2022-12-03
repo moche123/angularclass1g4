@@ -15,7 +15,7 @@ export class OrderAgePipe implements PipeTransform {
   transform(value: any, args?: any[]): any {
    // console.log(value)
    console.log('ORDERING')
-    let orderedPeople =  value.sort( (a:any,b:any) => a.edad-b.edad )
+    let orderedPeople =  value?.sort( (a:any,b:any) => a.edad-b.edad )
     return orderedPeople
   }
 
