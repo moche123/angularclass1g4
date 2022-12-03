@@ -1,36 +1,32 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ParentComponent } from './parent/parent.component';
-import { PersonajesComponent } from './personajes/personajes.component';
-import { PipedirectivaComponent } from './pipedirectiva/pipedirectiva.component';
+// import { ParentComponent } from './parent/parent.component';
+// import { PersonajesComponent } from './personajes/personajes.component';
+// import { PipedirectivaComponent } from './pipedirectiva/pipedirectiva.component';
 
 const routes: Routes = [
   
   {
     path: 'personaje',
-    component: PersonajesComponent
-    
+    //component: PersonajesComponent
+    loadChildren: () => import('./personajes/personajes.module').then(m => m.PersonajesModule)
+   
   },
   // {
-  //   path: 'personaje/:id',
-  //   component: PersonajesComponent
+  //   path: 'pipe-directiva',
+  //   component: PipedirectivaComponent
     
   // },
-  {
-    path: 'pipe-directiva',
-    component: PipedirectivaComponent
+  // {
+  //   path: 'parent',
+  //   component: ParentComponent
     
-  },
-  {
-    path: 'parent',
-    component: ParentComponent
-    
-  },
-  {
-    path: '',
-    redirectTo: 'personaje',
-    pathMatch: 'full'
-  },
+  // },
+  // {
+  //   path: '',
+  //   redirectTo: 'personaje',
+  //   pathMatch: 'full'
+  // },
 ];
 
 @NgModule({

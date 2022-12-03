@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PersonajesComponent } from './personajes/personajes.component';
+ import { PersonajesComponent } from './personajes/personajes.component';
 import {HttpClientModule} from '@angular/common/http';
 import { PipedirectivaComponent } from './pipedirectiva/pipedirectiva.component';
 import { OrderAgeDirective } from './directivas/order-age.directive';
