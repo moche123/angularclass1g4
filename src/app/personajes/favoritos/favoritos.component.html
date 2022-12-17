@@ -1,20 +1,20 @@
 <h1>FAVORITOS</h1>
 
-<div class="container parent">
+<div class="container parent" *ngIf="favorites.length>0">
 
-   <div *ngFor="let personaje of personajes">
+   <div *ngFor="let favorite of favorites">
 
       <div class="parent__item">
 
-         <h3>{{ personaje.name.length>15 ? (personaje.name | slice:0:15)+'..' : personaje.name}}</h3> 
+         <h3>{{ favorite.nameCharacter?.length>15 ? (favorite.nameCharacter | slice:0:15)+'..' : favorite.nameCharacter}}</h3> 
          
          <!-- <img src="{{personaje.image}}" alt=""> -->
          <!-- <img [src]=personaje.image alt=""> -->
-         <img [src]=personaje.image alt="">
+         <img [src]=favorite.caracterUrlImagen alt="">
 
          <br>
          <div class="parent__item__footer-card">
-            <button class="btn btn-primary">CLICK</button>
+            <button class="btn btn-danger" (click)="removeFavorite(favorite)">REMOVE</button>
             <p>Hola</p>
          </div>
       </div>

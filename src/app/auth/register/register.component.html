@@ -66,12 +66,12 @@
       </div>
     </div>
     <div class="crearCuenta">
-  
-        <a routerLink="/auth/login" class="">
-          Volver a inicio sesión
-        </a>
-      </div>
+      <a routerLink="/auth/login" class=""> Volver a inicio sesión </a>
+    </div>
+    <div class="mensaje-erroneo" *ngIf="message.length>0">
+      <p *ngFor="let msg of message" class="margin-mensaje-parrafo">
+        {{msg}}
+      </p>
+    </div>
   </form>
-  
-
 </div>
